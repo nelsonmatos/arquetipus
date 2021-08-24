@@ -415,196 +415,198 @@
         </section> -->
 
         <section class="site-section border-bottom" id="packs">
-        <div style="display: none;" class="container" id="app_content">
-            <div class="row justify-content-center mb-5">
-            <div class="col-md-8 text-center" data-aos="fade-up">
-                <h2 class="text-black h1 site-section-heading text-center arquetipus-font">Packs</h2>
-            </div>
-            </div>
+            <div style="display: none;" class="container" id="app_content">
+                <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center" data-aos="fade-up">
+                    <h2 class="text-black h1 site-section-heading text-center arquetipus-font">Packs</h2>
+                </div>
+                </div>
 
-            <div class="row pricing-wrapper">
-                <div class="col-sm-12 col-lg-3">
-                    <div class="package">
-                        <div class="name">Basic</div>
+                <div class="row pricing-wrapper">
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-1'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-1' }">
+                            <div class="name">Basic</div>
+                            <div class="trial">O que inclui</div>
+                            <hr />
+                            <ul>
+                            <li>
+                                <strong>Criação</strong> de imagem 3D de um espaço até 20m2
+                            </li>
+                            <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                            </li>
+                            <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-2'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-2' }">
+                            <div class="name">Basic +</div>
+                            <div class="trial" @click="setActivePricing()">O que inclui</div>
+
+                            <hr />
+
+                            <ul>
+                            <li>
+                                <strong>Criação</strong> de imagem 3D de um espaço superior a 20m2
+                            </li>
+                            <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                            </li>
+                            <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-3'">
+                    <div class="package" :class="{ brilliant: activePricing == 'price-3' }">
+                        <div class="name">À medida</div>
                         <div class="trial">O que inclui</div>
                         <hr />
                         <ul>
-                          <li>
-                            <strong>Criação</strong> de imagem 3D de um espaço até 20m2
-                          </li>
-                          <li>
+                            <li>
+                            <strong>Criação</strong> de imagem 3D de espaços, consoante o que pretende gastar
+                            </li>
+                            <li>
                             <strong>Disponibilização</strong> de 3 imagens renderizadas
-                          </li>
-                          <li>
+                            </li>
+                            <li>
+                            <strong>Orçamentação</strong> de materiais
+                            </li>
+                            <li>
                             <strong>Fornecimento</strong> de layout para execução de obra
-                          </li>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-lg-3">
-                    <div class="package">
-                        <div class="name">Basic +</div>
+                <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-4'">
+                    <div class="package" :class="{ brilliant: activePricing == 'price-4' }">
+                        <div class="name">Integrado</div>
+
                         <div class="trial">O que inclui</div>
                         <hr />
                         <ul>
-                          <li>
-                            <strong>Criação</strong> de imagem 3D de um espaço superior a 20m2
-                          </li>
-                          <li>
+                        <li>
+                            <strong>Criação</strong> de imagem 3D de espaços
+                        </li>
+                        <li>
                             <strong>Disponibilização</strong> de 3 imagens renderizadas
-                          </li>
-                          <li>
+                        </li>
+                        <li>
+                            <strong>Orçamentação</strong> de materiais
+                        </li>
+                        <li>
+                            <strong>Acompanhamento</strong> de obra
+                        </li>
+                        <li>
                             <strong>Fornecimento</strong> de layout para execução de obra
-                          </li>
+                        </li>
                         </ul>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-lg-3">
-                  <div class="package brilliant">
-                      <div class="name">À medida</div>
-                      <div class="trial">O que inclui</div>
-                      <hr />
-                      <ul>
-                        <li>
-                          <strong>Criação</strong> de imagem 3D de espaços, consoante o que pretende gastar
-                        </li>
-                        <li>
-                          <strong>Disponibilização</strong> de 3 imagens renderizadas
-                        </li>
-                        <li>
-                          <strong>Orçamentação</strong> de materiais
-                        </li>
-                        <li>
-                          <strong>Fornecimento</strong> de layout para execução de obra
-                        </li>
-                      </ul>
-                  </div>
-              </div>
-
-              <div class="col-sm-12 col-lg-3">
-                <div class="package">
-                    <div class="name">Integrado</div>
-
-                    <div class="trial">O que inclui</div>
-                    <hr />
-                    <ul>
-                      <li>
-                        <strong>Criação</strong> de imagem 3D de espaços
-                      </li>
-                      <li>
-                        <strong>Disponibilização</strong> de 3 imagens renderizadas
-                      </li>
-                      <li>
-                        <strong>Orçamentação</strong> de materiais
-                      </li>
-                      <li>
-                        <strong>Acompanhamento</strong> de obra
-                      </li>
-                      <li>
-                        <strong>Fornecimento</strong> de layout para execução de obra
-                      </li>
-                    </ul>
                 </div>
-              </div>
-            </div>
 
-            <!-- <div class="row align-items-stretch question-row">
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Simula o teu pack ideal:</h3>
-                    <p>Queres um desenho 3D. Mas já sabes o que pretendes?</p>
+                <!-- <div class="row align-items-stretch question-row">
+                <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
                 </div>
+                <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4 d-flex">
+                    <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+                    <div>
+                        <h3>Simula o teu pack ideal:</h3>
+                        <p>Queres um desenho 3D. Mas já sabes o que pretendes?</p>
+                    </div>
+                    </div>
+                    <div
+                    class="answers">
+                    <span class="anchor" @click="questionToggled(1, false);">Sim</span>
+                    <span class="anchor" @click="questionToggled(1, true);">Não</span>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+                </div>
+                </div>
+
+                <div class="row align-items-stretch question-row"
+                    v-if="question_1 || question_2">
+                <div
+                    v-if="question_1"
+                    class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question" >
+                    <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+                    <div>
+                        <h3>Pack xs-LOW & Pack s-LOW</h3>
+                        <p>Entra em contacto, envia as tuas ideias e as referências do material e recebes o teu render em 2/3 dias.</p>
+                    </div>
+                    </div>
                 </div>
                 <div
-                class="answers">
-                <span class="anchor" @click="questionToggled(1, false);">Sim</span>
-                <span class="anchor" @click="questionToggled(1, true);">Não</span>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
-            </div>
-
-            <div class="row align-items-stretch question-row"
-                v-if="question_1 || question_2">
-            <div
-                v-if="question_1"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question" >
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack xs-LOW & Pack s-LOW</h3>
-                    <p>Entra em contacto, envia as tuas ideias e as referências do material e recebes o teu render em 2/3 dias.</p>
-                </div>
-                </div>
-            </div>
-            <div
-                :class="[{
-                'col-sm-12': question_1,
-                'col-lg-4': question_1,
-                'col-sm-12': !question_1,
-                'col-lg-8': !question_1
-                }]">
-            </div>
-            <div
-                v-if="question_2"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <p>Sabes quanto queres gastar?</p>
-                </div>
+                    :class="[{
+                    'col-sm-12': question_1,
+                    'col-lg-4': question_1,
+                    'col-sm-12': !question_1,
+                    'col-lg-8': !question_1
+                    }]">
                 </div>
                 <div
-                class="answers">
-                <span class="anchor" @click="questionToggled(2, false);">Sim</span>
-                <span class="anchor" @click="questionToggled(2, true);">Não</span>
+                    v-if="question_2"
+                    class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question">
+                    <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+                    <div>
+                        <p>Sabes quanto queres gastar?</p>
+                    </div>
+                    </div>
+                    <div
+                    class="answers">
+                    <span class="anchor" @click="questionToggled(2, false);">Sim</span>
+                    <span class="anchor" @click="questionToggled(2, true);">Não</span>
+                    </div>
                 </div>
-            </div>
-            </div>
+                </div>
 
-            <div class="row align-items-stretch question-row"
-                v-if="question_3 || question_4">
-            <div :class="[{
-                'col-sm-12': question_3,
-                'col-lg-4': question_3,
-                'col-sm-12': question_4,
-                'col-lg-8': question_4
-                }]"
-                class="mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
+                <div class="row align-items-stretch question-row"
+                    v-if="question_3 || question_4">
+                <div :class="[{
+                    'col-sm-12': question_3,
+                    'col-lg-4': question_3,
+                    'col-sm-12': question_4,
+                    'col-lg-8': question_4
+                    }]"
+                    class="mb-4 mb-lg-4" data-aos="fade-up">
+                </div>
 
-            <div
-                v-if="question_3"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack Fit Me WelLOW</h3>
-                    <p>Boa! Diz-nos quanto queres gastar e as tuas ideias e nós fazemos um desenho 3D e ainda te damos o orçamento dos materiais escolhidos. Tudo a condizer com o tamanho da tua carteira.</p>
+                <div
+                    v-if="question_3"
+                    class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
+                    <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+                    <div>
+                        <h3>Pack Fit Me WelLOW</h3>
+                        <p>Boa! Diz-nos quanto queres gastar e as tuas ideias e nós fazemos um desenho 3D e ainda te damos o orçamento dos materiais escolhidos. Tudo a condizer com o tamanho da tua carteira.</p>
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
 
-            <div
-                v-if="question_4"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack In LOWco</h3>
-                    <p>Entra em contacto, fazemos aconselhamento no local e ajudámos-te a concretizar o teu espaço de sonho.</p>
+                <div
+                    v-if="question_4"
+                    class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
+                    <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
+                    <div>
+                        <h3>Pack In LOWco</h3>
+                        <p>Entra em contacto, fazemos aconselhamento no local e ajudámos-te a concretizar o teu espaço de sonho.</p>
+                    </div>
+                    </div>
                 </div>
-                </div>
+                </div> -->
             </div>
-            </div> -->
-        </div>
         </section>
 
         <section class="site-section bg-light" id="contact-section">
@@ -829,6 +831,10 @@
             font-size: 15px;
         }
 
+        .pricing-wrapper .hover {
+            cursor: pointer;
+        }
+
         @media screen and (min-width: 0px) {
           .pricing-wrapper .package {
             height: 300px;
@@ -983,48 +989,21 @@
     </script>
 
     <script>
-        new Vue({
-        el: "#app_content",
+    new Vue({
+        el: "#packs",
         data: {
-            question_1: false,
-            question_2: false,
-            question_3: false,
-            question_4: false,
-
-            currentDate: new Date().getFullYear()
-
+            activePricing: 'price-2'
         },
-        methods: {
-            resetQuestions () {
-            this.question_1 = false
-            this.question_2 = false
-            this.question_3 = false
-            this.question_4 = false
-            },
 
-            questionToggled: function (index, status) {
-            if (index == 1) {
-                if (status) {
-                this.resetQuestions()
-                this.question_2 = true
-                } else {
-                this.resetQuestions()
-                this.question_1 = true
-                }
-            } else {
-                if (status) {
-                this.question_3 = false
-                this.question_4 = true
-                } else {
-                this.question_3 = true
-                this.question_4 = false
-                }
-            }
+        methods: {
+            setActivePricing: function () {
+                console.log(id)
+                this.activePricing = 'price-' + id
             }
         }
-        })
+    })
 
-        new Vue({
+    new Vue({
         el: "#contact-section",
 
         data: {
@@ -1079,7 +1058,7 @@
             });
             }
         }
-        })
+    })
     </script>
   </body>
 </html>
