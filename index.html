@@ -126,23 +126,16 @@
             </div>
         </div> -->
 
-        <video playsinline autoplay muted loop id="myvideo">
-            <source src="images/home.mp4" type="video/mp4">
-            <source src="images/home.webm" type="video/webm">
-            <source src="images/home.ogv" type="video/ogv">
-        </video>
-
         <div class="video-header">
 
             <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
             <div class="overlay"></div>
           
             <!-- The HTML5 video element that will create the background video on the header -->
-            <video playsinline autoplay muted loop controls id="myvideo">
-                <source src="images/home.mp4" type="video/mp4">
-                <source src="images/home.webm" type="video/webm">
-                <source src="images/home.ogv" type="video/ogv">
-                
+            <video playsinline autoplay muted loop controls defaultMuted preload="none">
+                <source preload="none" src="images/home.webm#t=0.001" type="video/webm">
+                <source preload="none" src="images/home.ogv#t=0.001" type="video/ogv">
+                <source preload="none" src="images/home.mp4#t=0.001" type="video/mp4">                
             </video>
           
             <!-- The header content -->
