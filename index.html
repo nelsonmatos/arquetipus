@@ -127,7 +127,7 @@
         </div> -->
 
           
-        <div class="video-header">
+        <div class="video-header" id="home-section">
 
             <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
             <div class="overlay"></div>
@@ -143,9 +143,9 @@
           
             <!-- The header content -->
             <div class="container h-100">
-              <div class="d-flex h-100 text-center align-items-center">
+              <div class="d-flex h-100 text-center align-items-center video-header-text">
                 <div class="w-100 text-white">
-                  <h1 class="display-3 arquetipus-font">Renderização</h1>
+                  <!-- <h1 class="display-3 arquetipus-font">Renderização</h1> -->
                   <p class="lead mb-0 arquetipus-font">Transforma a ideia em realidade</p>
                 </div>
               </div>
@@ -444,196 +444,103 @@
         </section> -->
 
         <section class="site-section border-bottom" id="packs">
-        <div style="display: none;" class="container" id="app_content">
-            <div class="row justify-content-center mb-5">
-            <div class="col-md-8 text-center" data-aos="fade-up">
-                <h2 class="text-black h1 site-section-heading text-center arquetipus-font">Packs</h2>
-            </div>
-            </div>
+            <div style="display: none;" class="container" id="app_content">
+                <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center" data-aos="fade-up">
+                    <h2 class="text-black h1 site-section-heading text-center arquetipus-font">Packs</h2>
+                </div>
+                </div>
 
-            <div class="row pricing-wrapper">
-                <div class="col-sm-12 col-lg-3">
-                    <div class="package">
-                        <div class="name">Basic</div>
-                        <div class="trial">O que inclui</div>
-                        <hr />
-                        <ul>
-                          <li>
-                            <strong>Criação</strong> de imagem 3D de um espaço até 20m2
-                          </li>
-                          <li>
-                            <strong>Disponibilização</strong> de 3 imagens renderizadas
-                          </li>
-                          <li>
-                            <strong>Fornecimento</strong> de layout para execução de obra
-                          </li>
-                        </ul>
+                <div class="row pricing-wrapper">
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-1'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-1' }">
+                            <div class="name">Basic</div>
+                            <div class="trial">O que inclui</div>
+                            <hr />
+                            <ul>
+                            <li>
+                                <strong>Criação</strong> de imagem 3D de um espaço até 20m2
+                            </li>
+                            <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                            </li>
+                            <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-2'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-2' }">
+                            <div class="name">Basic +</div>
+                            <div class="trial" @click="setActivePricing()">O que inclui</div>
+
+                            <hr />
+
+                            <ul>
+                            <li>
+                                <strong>Criação</strong> de imagem 3D de um espaço superior a 20m2
+                            </li>
+                            <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                            </li>
+                            <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-3'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-3' }">
+                            <div class="name">À medida</div>
+                            <div class="trial">O que inclui</div>
+                            <hr />
+                            <ul>
+                                <li>
+                                <strong>Criação</strong> de imagem 3D de espaços, consoante o que pretende gastar
+                                </li>
+                                <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                                </li>
+                                <li>
+                                <strong>Orçamentação</strong> de materiais
+                                </li>
+                                <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-3 hover" @click="activePricing = 'price-4'">
+                        <div class="package" :class="{ brilliant: activePricing == 'price-4' }">
+                            <div class="name">Integrado</div>
+
+                            <div class="trial">O que inclui</div>
+                            <hr />
+                            <ul>
+                            <li>
+                                <strong>Criação</strong> de imagem 3D de espaços
+                            </li>
+                            <li>
+                                <strong>Disponibilização</strong> de 3 imagens renderizadas
+                            </li>
+                            <li>
+                                <strong>Orçamentação</strong> de materiais
+                            </li>
+                            <li>
+                                <strong>Acompanhamento</strong> de obra
+                            </li>
+                            <li>
+                                <strong>Fornecimento</strong> de layout para execução de obra
+                            </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-sm-12 col-lg-3">
-                    <div class="package">
-                        <div class="name">Basic +</div>
-                        <div class="trial">O que inclui</div>
-                        <hr />
-                        <ul>
-                          <li>
-                            <strong>Criação</strong> de imagem 3D de um espaço superior a 20m2
-                          </li>
-                          <li>
-                            <strong>Disponibilização</strong> de 3 imagens renderizadas
-                          </li>
-                          <li>
-                            <strong>Fornecimento</strong> de layout para execução de obra
-                          </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-sm-12 col-lg-3">
-                  <div class="package brilliant">
-                      <div class="name">À medida</div>
-                      <div class="trial">O que inclui</div>
-                      <hr />
-                      <ul>
-                        <li>
-                          <strong>Criação</strong> de imagem 3D de espaços, consoante o que pretende gastar
-                        </li>
-                        <li>
-                          <strong>Disponibilização</strong> de 3 imagens renderizadas
-                        </li>
-                        <li>
-                          <strong>Orçamentação</strong> de materiais
-                        </li>
-                        <li>
-                          <strong>Fornecimento</strong> de layout para execução de obra
-                        </li>
-                      </ul>
-                  </div>
-              </div>
-
-              <div class="col-sm-12 col-lg-3">
-                <div class="package">
-                    <div class="name">Integrado</div>
-
-                    <div class="trial">O que inclui</div>
-                    <hr />
-                    <ul>
-                      <li>
-                        <strong>Criação</strong> de imagem 3D de espaços
-                      </li>
-                      <li>
-                        <strong>Disponibilização</strong> de 3 imagens renderizadas
-                      </li>
-                      <li>
-                        <strong>Orçamentação</strong> de materiais
-                      </li>
-                      <li>
-                        <strong>Acompanhamento</strong> de obra
-                      </li>
-                      <li>
-                        <strong>Fornecimento</strong> de layout para execução de obra
-                      </li>
-                    </ul>
-                </div>
-              </div>
             </div>
-
-            <!-- <div class="row align-items-stretch question-row">
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4 d-flex">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Simula o teu pack ideal:</h3>
-                    <p>Queres um desenho 3D. Mas já sabes o que pretendes?</p>
-                </div>
-                </div>
-                <div
-                class="answers">
-                <span class="anchor" @click="questionToggled(1, false);">Sim</span>
-                <span class="anchor" @click="questionToggled(1, true);">Não</span>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
-            </div>
-
-            <div class="row align-items-stretch question-row"
-                v-if="question_1 || question_2">
-            <div
-                v-if="question_1"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question" >
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack xs-LOW & Pack s-LOW</h3>
-                    <p>Entra em contacto, envia as tuas ideias e as referências do material e recebes o teu render em 2/3 dias.</p>
-                </div>
-                </div>
-            </div>
-            <div
-                :class="[{
-                'col-sm-12': question_1,
-                'col-lg-4': question_1,
-                'col-sm-12': !question_1,
-                'col-lg-8': !question_1
-                }]">
-            </div>
-            <div
-                v-if="question_2"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <p>Sabes quanto queres gastar?</p>
-                </div>
-                </div>
-                <div
-                class="answers">
-                <span class="anchor" @click="questionToggled(2, false);">Sim</span>
-                <span class="anchor" @click="questionToggled(2, true);">Não</span>
-                </div>
-            </div>
-            </div>
-
-            <div class="row align-items-stretch question-row"
-                v-if="question_3 || question_4">
-            <div :class="[{
-                'col-sm-12': question_3,
-                'col-lg-4': question_3,
-                'col-sm-12': question_4,
-                'col-lg-8': question_4
-                }]"
-                class="mb-4 mb-lg-4" data-aos="fade-up">
-            </div>
-
-            <div
-                v-if="question_3"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack Fit Me WelLOW</h3>
-                    <p>Boa! Diz-nos quanto queres gastar e as tuas ideias e nós fazemos um desenho 3D e ainda te damos o orçamento dos materiais escolhidos. Tudo a condizer com o tamanho da tua carteira.</p>
-                </div>
-                </div>
-            </div>
-
-            <div
-                v-if="question_4"
-                class="col-sm-12 col-lg-4 mb-4 mb-lg-4 question final-question">
-                <div class="unit-4 d-flex" data-aos="fade-up" data-aos-delay="100">
-                <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-                <div>
-                    <h3>Pack In LOWco</h3>
-                    <p>Entra em contacto, fazemos aconselhamento no local e ajudámos-te a concretizar o teu espaço de sonho.</p>
-                </div>
-                </div>
-            </div>
-            </div> -->
-        </div>
         </section>
 
         <section class="site-section bg-light" id="contact-section">
@@ -737,12 +644,13 @@
                     <li><a href="#about-section">Quem somos</a></li>
                     <li><a href="#work-section">Projetos</a></li>
                     <li><a href="#services-section">Serviços</a></li>
+                    <li><a href="#packs">Packs</a></li>
                     <li><a href="#contact-section">Contactos</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <h2 class="footer-heading mb-4">Siga-nos</h2>
-                    <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
+                    <!-- <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a> -->
                     <!-- <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a> -->
                     <a href="https://www.instagram.com/arquetipus3d/" target="_blank" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
                     <!-- <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a> -->
@@ -766,6 +674,17 @@
     </div> <!-- .site-wrap -->
 
     <style>
+        .video-header-text {
+            text-align: end !important;
+            flex-direction: column;
+            justify-content: end;
+            padding-bottom: 50px;
+        }
+
+        .video-header-text p {
+            font-size: 40px;
+        }
+
         .video-header {
             position: relative;
             background-color: black;
@@ -809,8 +728,6 @@
             /* Media Query for devices withi coarse pointers and no hover functionality */
 
             /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-
-
     </style>
 
     <style>
@@ -945,6 +862,7 @@
         .pricing-wrapper .package:hover {
             margin-top: 5px;
             transition: margin-top 0.3s linear;
+            cursor: pointer;
         }
 
         .pricing-wrapper .name {
@@ -1042,8 +960,6 @@
 
     <script src="js/typed.js"></script>
     <script>
-        document.getElementById('myvideo').play();
-
         var typed = new Typed('.typed-words', {
             strings: ["Renderização 3D"],
             typeSpeed: 80,
@@ -1063,101 +979,74 @@
 
     <script>
         new Vue({
-        el: "#app_content",
-        data: {
-            question_1: false,
-            question_2: false,
-            question_3: false,
-            question_4: false,
-
-            currentDate: new Date().getFullYear()
-
-        },
-        methods: {
-            resetQuestions () {
-            this.question_1 = false
-            this.question_2 = false
-            this.question_3 = false
-            this.question_4 = false
+            el: "#packs",
+            data: {
+                activePricing: 'price-3'
             },
 
-            questionToggled: function (index, status) {
-            if (index == 1) {
-                if (status) {
-                this.resetQuestions()
-                this.question_2 = true
-                } else {
-                this.resetQuestions()
-                this.question_1 = true
-                }
-            } else {
-                if (status) {
-                this.question_3 = false
-                this.question_4 = true
-                } else {
-                this.question_3 = true
-                this.question_4 = false
+            methods: {
+                setActivePricing: function () {
+                    console.log(id)
+                    this.activePricing = 'price-' + id
                 }
             }
-            }
-        }
         })
 
         new Vue({
-        el: "#contact-section",
+            el: "#contact-section",
 
-        data: {
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        },
-
-        methods: {
-            sendEmail () {
-            if (!this.name) {
-                Swal.fire({
-                title: 'Aviso',
-                text: 'Por favor, indique o seu nome.',
-                icon: 'error',
-                confirmButtonText: 'Ok',
-                confirmButtonColor: "#21b9a6"
-                })
-
-                return
-            }
-
-            if (!this.email) {
-                Swal.fire({
-                title: 'Aviso',
-                text: 'Por favor, indique o seu email.',
-                icon: 'error',
-                confirmButtonText: 'Ok',
-                confirmButtonColor: "#21b9a6"
-                })
-
-                return
-            }
-
-            $.post("send-email.php",
-            {
-                name: this.name,
-                email: this.email,
-                subject: this.subject,
-                message: 'Nome: ' + this.name + '<br>' + 'Email: ' + this.email + '<br>' + 'Assunto: ' + this.subject + '<br>'+ 'Mensagem: ' + this.message
+            data: {
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
             },
-            function(data, status){
-                Swal.fire({
-                title: 'Sucesso',
-                text: 'Obrigado pelo seu contacto. Prometemos responder brevemente.',
-                icon: 'success',
-                confirmButtonText: 'Ok',
-                confirmButtonColor: "#21b9a6"
-                })
 
-            });
+            methods: {
+                sendEmail () {
+                if (!this.name) {
+                    Swal.fire({
+                    title: 'Aviso',
+                    text: 'Por favor, indique o seu nome.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok',
+                    confirmButtonColor: "#21b9a6"
+                    })
+
+                    return
+                }
+
+                if (!this.email) {
+                    Swal.fire({
+                    title: 'Aviso',
+                    text: 'Por favor, indique o seu email.',
+                    icon: 'error',
+                    confirmButtonText: 'Ok',
+                    confirmButtonColor: "#21b9a6"
+                    })
+
+                    return
+                }
+
+                $.post("send-email.php",
+                {
+                    name: this.name,
+                    email: this.email,
+                    subject: this.subject,
+                    message: 'Nome: ' + this.name + '<br>' + 'Email: ' + this.email + '<br>' + 'Assunto: ' + this.subject + '<br>'+ 'Mensagem: ' + this.message
+                },
+                function(data, status){
+                    Swal.fire({
+                    title: 'Sucesso',
+                    text: 'Obrigado pelo seu contacto. Prometemos responder brevemente.',
+                    icon: 'success',
+                    confirmButtonText: 'Ok',
+                    confirmButtonColor: "#21b9a6"
+                    })
+
+                });
+                }
             }
-        }
         })
     </script>
   </body>
