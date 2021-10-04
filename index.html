@@ -146,7 +146,7 @@
               <div class="d-flex h-100 text-center align-items-center video-header-text">
                 <div class="w-100 text-white">
                   <!-- <h1 class="display-3 arquetipus-font">Renderização</h1> -->
-                  <p class="lead mb-0 arquetipus-font">Transforma a ideia em realidade</p>
+                  <p class="lead mb-0 arquetipus-font title-size">Transforma a ideia em realidade</p>
                 </div>
               </div>
             </div>
@@ -681,10 +681,6 @@
             padding-bottom: 50px;
         }
 
-        .video-header-text p {
-            font-size: 40px;
-        }
-
         .video-header {
             position: relative;
             background-color: black;
@@ -763,15 +759,28 @@
             margin-top: 150px;
         }
 
+
+        .title-size {
+            font-size: 60px !important;
+        }
+
         @media screen and (max-width: 600px) {
             .bg-img {
                 background-image: url(images/bg_1_xs.png);
+            }
+
+            .title-size {
+                font-size: 45px !important;
             }
         }
 
         @media screen and (max-width: 992px) {
             .bg-img {
                 background-image: url(images/bg_1_md.png);
+            }
+
+            .title-size {
+                font-size: 45px !important;
             }
         }
 
@@ -786,6 +795,10 @@
 
             .header-text p {
                 font-size: 30px;
+            }
+
+            .title-size {
+                font-size: 45px !important;
             }
         }
 
